@@ -57,6 +57,62 @@
         p button{
             padding: 2px;
         }
+        footer a{
+            display: block;
+        }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: blue;
+            width: 0%;
+        }
+        .trailer{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            visibility: hidden;
+            opacity: 0;
+        }  
+        .trailer.active{
+            visibility: visible;
+            opacity: 1;
+        }
+        .trailer video{
+            max-width: 80%;
+            outline: none;
+        }      
+        .close{
+            position: absolute;
+            top: 10%;
+            right: 4%;
+            max-width: 5vw;
+            cursor: pointer;
+            border: 2px solid black;
+            color: black;
+            opacity: 1;
+        }
+        .close:hover{
+            border: none;
+        }
         @media screen and (min-width: 772px){
             nav img{
                 width: 30vw;
@@ -119,62 +175,6 @@
             button{
                 color:black;
             }
-        }
-        footer a{
-            display: block;
-        }
-        #header_img:hover{
-            box-shadow: 0 0 50px rgba(0,0,0,1);
-        }
-        #progressContainer {
-            width: 100%;
-            background: #f3f3f3;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 5px;
-            z-index: 100;
-        }
-        #progressBar {
-            height: 5px;
-            background: blue;
-            width: 0%;
-        }
-        .trailer{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 100000;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(20px);
-            visibility: hidden;
-            opacity: 0;
-        }  
-        .trailer.active{
-            visibility: visible;
-            opacity: 1;
-        }
-        .trailer video{
-            max-width: 80%;
-            outline: none;
-        }      
-        .close{
-            position: absolute;
-            top: 10%;
-            right: 4%;
-            max-width: 5vw;
-            cursor: pointer;
-            border: 2px solid black;
-            color: black;
-            opacity: 1;
-        }
-        .close:hover{
-            border: none;
         }
     </style>
 </head>
