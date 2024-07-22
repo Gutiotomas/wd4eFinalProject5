@@ -52,7 +52,24 @@
         }
         footer a{
             display: block;
-        }          
+        }  
+        img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: orange;
+            width: 0%;
+        }
         @media screen and (min-width: 772px){
             nav img{
                 width: 35vw;
@@ -105,23 +122,6 @@
             footer a:hover{
                 color: white;
             }
-        }
-        img:hover{
-            box-shadow: 0 0 50px rgba(0,0,0,1);
-        }
-        #progressContainer {
-            width: 100%;
-            background: #f3f3f3;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 5px;
-            z-index: 100;
-        }
-        #progressBar {
-            height: 5px;
-            background: orange;
-            width: 0%;
         }       
     </style>
 </head>
