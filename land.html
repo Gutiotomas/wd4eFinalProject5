@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Land Legends</title>
+    <link rel="icon" type="image/png" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/css/lightbox.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="js/land.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <style>
+        body {
+            background-color: #E7E8D1;
+            max-width: 98%;
+            margin: 0 auto;
+        }
+        div img{
+            width: 40%;
+            display: inline-block;
+        }
+        div img:hover{
+            width: 45%;
+            border: 5px dotted #6AB187;
+        }
+        header {
+            background-color: #A7BEAE;
+        }
+        .current{
+            background-color: #6AB187;
+        }
+        body img{
+            border: 5px solid #20948B;
+        }
+        body img:hover{
+            border: 5px dotted #20948B;
+        }
+        nav a:focus{
+            background-color: #B85042;
+        }
+        div:nth-child(even) img {
+            border: 8px solid peru;
+            border-radius: 20px;
+        }
+        div:nth-child(odd) img {
+            border: 8px solid brown;
+            border-radius: 20px;
+        }
+        button{
+                background-color:#FDF8F2;
+                color: green;
+                padding: 10px 20px;
+                margin: 10px;
+                cursor: pointer;
+        }
+        footer a{
+            display: block;
+        }
+        @media screen and (min-width: 772px){
+            div img{
+                display:inline-block;
+                width: 45%;
+            }
+            div img:hover{
+                width: 50%;
+                border: 5px dotted #6AB187;
+            }
+        }
+        @media screen and (min-width: 998px){
+            div img{
+                display:inline-block;
+                width: 40%;
+            }
+            div img:hover{
+                width: 50%;
+                border: 5px dotted #6AB187;
+            }
+            .grid{
+                grid-template-columns: 45% 45%;
+            }           
+        }
+        @media (prefers-color-scheme: dark){
+            header{
+                background-color:  #323232;  
+                color:white;          
+            }
+            body{
+                background-color: #CD9C8A;
+            }
+            footer a{
+                color: #FFF2D7;
+            }
+            .current{
+                background-color: #993000;
+            }   
+            main{
+                color: black;
+            }
+            footer{
+                color: black;
+            }
+            footer a{
+                color: black;
+            }
+            #progressBar {
+                background: #99300E;
+            }
+            nav a{
+                color: white;
+            }
+            footer a:hover{
+                color: black;
+            }
+        }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }        
+        #progressBar {
+            height: 5px;
+            background: green;
+            width: 0%;
+        } 
+    </style>
+</head>
+<body class="fade-in" onload="pickImage()">
+    <a class="offpage" href = "#main_content">Skip To Main Content</a>
+    <header>
+        <nav id="top">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="index.html">Animal Kingdom</a></li>
+                <li><a href="aquatic.html">Aquatic Marvels</a></li>
+                <li class="current"><a href="land.html">Land Legends</a></li>
+                <li><a href="flying.html">Flaying Wonders</a></li>
+            </ul>
+            <img id="header_img" src="images/hippopotamus.jpg" alt="Waiting for an image">
+        </nav>
+        <h1>Terrestrial Legends</h1>
+    </header>
+    <main id="main_content">
+        <div  id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+        <h2>Discover the Majesty of Land Life</h2>
+        <p>Step into the captivating world of the Land Legends, where the wonders of terrestrial life come to life. From the vast savannas and dense jungles to towering mountains and expansive forests, this section explores the remarkable diversity of land-dwelling creatures. Here, you'll discover the iconic animals that roam these terrains and learn interesting information about them.</p>
+        <p>Join us on this fascinating journey through the Land Legends and marvel at the incredible life that thrives on our planet's diverse landscapes. Whether you're a wildlife enthusiast or a curious explorer, there's something here to inspire and educate everyone.</p>
+        <div class="grid">
+            <div>
+                <h3>The Majestic African Elephant</h3>
+                <a href="images/elephant.jpg" data-lightbox="elephant" data-title="African Elephant">
+                    <img src="images/elephant.jpg" alt="African Elephant">
+                </a>
+                <a href="images/elephant2.jpg" data-lightbox="elephant" data-title="African Elephant with his baby">
+                    <img src="images/elephant2.jpg" alt="African Elephant with his baby">
+                </a>                
+                <p>The African elephant (Loxodonta africana) is the largest land animal on Earth, renowned for its impressive size, intelligence, and social structure. These magnificent creatures are a symbol of strength and grace, roaming the savannas, forests, and deserts of Africa. Watch the elephant video <a href="https://youtu.be/Aw6GkiCvcWs?si=CDajrBVXpkwjy7Zl" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Fearsome Lion</h3>
+                <a href="images/lion.jpg" data-lightbox="lion" data-title="Lion">
+                    <img src="images/lion.jpg" alt="Lion">
+                </a>
+                <a href="images/lioness.jpg" data-lightbox="lion" data-title="Lioness with her baby">
+                    <img src="images/lioness.jpg" alt="Lioness with her baby">
+                </a>
+                <p>The lion (Panthera leo) is one of the most iconic and revered predators of the African savanna. Known for their majestic manes, powerful roars, and social behavior, lions are apex predators that play a crucial role in maintaining the balance of their ecosystems. Watch the lion video <a href="https://youtu.be/OMkEVX23BdM?si=x-R7z3wlTU78iT_g" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Graceful Giraffe</h3>
+                <a href="images/giraffe.jpg" data-lightbox="giraffe" data-title="Giraffe">
+                    <img src="images/giraffe.jpg" alt="Giraffe">
+                </a>
+                <a href="images/giraffes.jpg" data-lightbox="giraffe" data-title="A copuple of giraffes">
+                    <img src="images/giraffes.jpg" alt="A copuple of giraffes">
+                </a>
+                <p>The giraffe (Giraffa camelopardalis) is the tallest land animal in the world, with its long neck and legs making it a truly unique and fascinating creature. These gentle giants are known for their graceful movements, distinctive patterns, and social behavior. Watch the giraffe video <a href="https://youtu.be/P_ckAbOr0r4?si=KYelcKX9uvkZueYd" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Powerful Bengal Tiger</h3>
+                <a href="images/tiger.jpg" data-lightbox="tiger" data-title="Bengal Tiger">
+                    <img src="images/tiger.jpg" alt="Bengal Tiger">
+                </a>
+                <a href="images/tigers.jpg" data-lightbox="tiger" data-title="Bengal tigers playing">
+                    <img src="images/tigers.jpg" alt="Bengal tigers playing">
+                </a>
+                <p>The Bengal tiger (Panthera tigris tigris) is the largest tiger subspecies and one of the most iconic big cats in the world. Known for their striking appearance, powerful build, and stealthy hunting skills, Bengal tigers are a symbol of strength and beauty. Watch the bengal tiger video <a href="https://youtu.be/FK3dav4bA4s?si=BP0wGy8M6zore-MV" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Sublime Rhino</h3>
+                <a href="images/rhino.jpg" data-lightbox="rhino" data-title="Rhino with his baby">
+                    <img src="images/rhino.jpg" alt="Rhino with his baby">
+                </a>
+                <a href="images/rhino2.jpg" data-lightbox="rhino" data-title="Rhino">
+                    <img src="images/rhino2.jpg" alt="Rhino">
+                </a>
+                <p>The rhinoceros is a large, herbivorous mammal known for its distinctive horns and formidable appearance. These magnificent creatures are found in Africa and Asia, with several species facing the threat of extinction due to poaching and habitat loss. Watch the rhino video <a href="https://youtu.be/_b9SgHw-cxI?si=CHMTVDdax_CxWMEy" target="_blank">here</a>.</p> 
+            </div>
+            <div>
+                <h3>The Stealthy Crocodile</h3>  
+                <a href="images/crocodile.jpg" data-lightbox="crocodile" data-title="Crocodile">
+                    <img src="images/crocodile.jpg" alt="Crocodile">          
+                </a>
+                <a href="images/crocodile2.jpg" data-lightbox="crocodile" data-title="Crocodile resting">
+                    <img src="images/crocodile2.jpg" alt="Crocodile resting">
+                </a>
+                <p>The crocodile is a fearsome reptile that has roamed the Earth for millions of years, with a lineage that dates back to the age of dinosaurs. These powerful predators are found in freshwater habitats across the globe, where they play a crucial role in maintaining the health of aquatic ecosystems. Watch the crocodile video <a href="https://youtu.be/4h9re1bHt40?si=IC9AkqNt4V9x1_z5" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Curious Meerkat</h3>
+                <a href="images/meerkat.jpg" data-lightbox="meerkat" data-title="Meerkat">
+                    <img src="images/meerkat.jpg" alt="Meerkat">
+                </a>
+                <a href="images/meerkats.jpg" data-lightbox="meerkat" data-title="Family of meerkats">
+                    <img src="images/meerkats.jpg" alt="Family of meerkats">
+                </a>
+                <p>The meerkat (Suricata suricatta) is a small mammal that belongs to the mongoose family, known for its social behavior, keen senses, and distinctive appearance. These charming creatures are found in the deserts and grasslands of southern Africa, where they live in tight-knit family groups called mobs. Watch the meerkat video <a href="https://youtu.be/W4og8g_X22o?si=eMgYkviA22deFmwZ" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Agile Antelope</h3>
+                <a href="images/antelope.jpg" data-lightbox="antelope" data-title="Antelope">
+                    <img src="images/antelope.jpg" alt="Antelope">
+                </a>
+                <a href="images/antelopes.jpg" data-lightbox="antelope" data-title="Group of antelopes">
+                    <img src="images/antelopes.jpg" alt="Group of antelopes">
+                </a>
+                <p>The antelope is a diverse group of herbivorous mammals that are known for their speed, agility, and graceful movements. These elegant creatures are found in a variety of habitats across Africa, Asia, and North America, where they play a crucial role in the food chain. Watch the antelope video <a href="https://youtu.be/N1L8yo-3OlY?si=_8rTy3-ojSGsZHpm" target="_blank">here</a>.</p>
+            </div>
+            <div>   
+                <h3>The Enigmatic King Cobra</h3>
+                <a href="images/snake.jpg" data-lightbox="snake" data-title="King Cobra">
+                    <img src="images/snake.jpg" alt="King Cobra">
+                </a>
+                <a href="images/snake2.jpg" data-lightbox="snake" data-title="King Cobra showing the tongue">
+                    <img src="images/snake2.jpg" alt="King Cobra showing the tongue">
+                </a>
+                <p>The king cobra (Ophiophagus hannah) is the world's longest venomous snake, known for its striking appearance, deadly venom, and fearsome reputation. These majestic serpents are found in the forests and grasslands of Southeast Asia, where they are both feared and revered by humans. Watch the king cobra video <a href="https://youtu.be/7X2New9KTJU?si=e314lHguAL9edBHh" target="_blank">here</a>.</p>
+            </div>
+            <div>
+                <h3>The Mysterious Grey Wolf</h3>
+                <a href="images/wolf.jpg" data-lightbox="wolf" data-title="Grey Wolf">
+                    <img src="images/wolf.jpg" alt="Grey Wolf">
+                </a>
+                <a href="images/wolves.jpg" data-lightbox="wolf" data-title="Grey Wolf pack">
+                    <img src="images/wolves.jpg" alt="Grey Wolf pack">
+                </a>
+                <p>The grey wolf (Canis lupus), also known simply as the wolf, is one of the most iconic and fascinating animals in the world. Known for its intelligence, social structure, and adaptability, the grey wolf plays a crucial role in the ecosystems it inhabits. Watch the grey wolf video <a href="https://youtu.be/YXMo5w9aMNs?si=hPmIu52YLD32mvgg" target="_blank">here</a>.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>This page was originally created by Tomas Gutierrez Orrego</p>
+        <p>&copy; 2024</p>
+        <button type="button" id ="demo" onclick="displayDate()" onmouseover="displayDate()">Display Date </button >
+        <a href="#top">Jump to the Top</a>
+    </footer>
+</body>
+</html>    

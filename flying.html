@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flying Wonders</title>
+    <link rel="icon" type="image/png" href="images/icon.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="dist/css/lightbox.css">
+    <link rel="stylesheet" href="css/styles.css">    
+    <script src="js/flying.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <style>
+        body {
+            background-color: #89ABE3;
+            max-width: 98%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #00246B;
+            color:#ffffff;
+        }
+        .current{
+            background-color: #375E97;
+            color:white;
+        }
+        body img{
+            border: 5px solid #89ABE3;
+        }
+        body img:hover{
+            border: 5px dotted aqua;
+        }
+        nav a{
+            color: #ffffff;
+        }
+        nav a:focus{
+            background-color: #EA738D;
+        }
+        div img{
+            display:block;
+            margin:auto;
+            width: 90%;
+            border: 3px solid #375E97;
+        }
+        div img:hover{
+            border-radius: 30%;
+            padding: 2px;
+        }
+        @media screen and (min-width: 772px){
+            div img{
+                display:inline-block;
+                margin:auto;
+                width: 90%;
+            }
+            body img:hover{
+                border: 5px dotted aqua;
+            }
+        }
+        @media screen and (min-width: 998px){
+            div img{
+                display:block;
+                margin:auto;
+                width: 90%;
+            }
+            body img:hover{
+                border: 5px dotted aqua;
+            }
+        }
+        @media (prefers-color-scheme: dark){
+            header{
+                background-color:  #6ACFC7;  
+                color:black;          
+            }
+            body{
+                background-color: #4F0341;
+            }
+            footer a{
+                color: #FFF2D7;
+            }
+            .current{
+                background-color: #D668E3;
+            } 
+            body a{
+                color: white;
+            }
+            body a:hover{
+                color: white;
+            }
+            body a:focus{
+                color:white;
+            }
+            #progressBar {
+                background: #4F0341;
+            } 
+            button{
+                background-color: #EF3B33;
+            }
+            nav a{
+                color: black;
+            }
+            nav a:focus{
+                color: black;
+            }
+            nav a:hover{
+                color: black;
+            }
+            footer a:hover{
+                color: white;
+            }
+        }
+            button{
+            background-color: #1750BA;
+            color: cornsilk;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        footer a{
+            display: block;
+        }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: blue;
+            width: 0%;
+        } 
+    </style>
+</head>
+<body class="fade-in" onload = "pickImage()">
+    <a class="offpage focus" href = "#main_content">Skip To Main Content</a>
+    <header id="top">
+        <nav>
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="index.html">Animal Kingdom</a></li>
+                <li><a href="aquatic.html">Aquatic Marvels</a></li>
+                <li><a href="land.html">Land Legends</a></li>
+                <li class="current"><a href="flying.html">Flaying Wonders</a></li>
+            </ul>
+            <img id = "header_img" src="images/butterfly.jpg" alt="Waiting for an image.">
+            
+        </nav>
+        
+        <h1>Airborne Creatures</h1>
+    </header>
+    <main id="main_content">
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+        <h2>Discover the Awesomeness of Flying Wonders</h2>
+        <p>Take to the skies and explore the enchanting world of the Flying Wonders. From the delicate flutter of a butterfly’s wings to the powerful soar of an eagle, this section celebrates the incredible diversity of airborne creatures. Discover the unique adaptations that allow these animals to conquer the skies, and learn about some fascinating facts about them.</p>
+        <p>Join us on this soaring journey through the Flying Wonders and marvel at the incredible life that takes flight above us. Whether you’re a birdwatcher, an insect enthusiast, or simply curious about the world above, there’s something here to inspire and educate everyone.</p>
+        <div class="flex">
+            <a href="images/bee.jpg" data-lightbox="images" data-title="A bee collecting pollen">
+                <img src="images/bee.jpg" alt="Bee">
+            </a>
+            <a href="images/flamingo.jpg" data-lightbox="images" data-title="Flamingos drinking water">
+                <img src="images/flamingo.jpg" alt="Flamingo">
+            </a>
+            <a href="images/eagle.jpg" data-lightbox="images" data-title="Bald Eagle in flight">
+                <img src="images/eagle.jpg" alt="Bald Eagle">
+            </a>
+            <a href="images/owl.jpg" data-lightbox="images" data-title="Owl perched on a branch">
+                <img src="images/owl.jpg" alt="Owl">
+            </a>
+            <a href="images/falcon.jpg" data-lightbox="images" data-title="Peregrine Falcon in flight">
+                <img src="images/falcon.jpg" alt="Falcon">
+            </a>
+            <a href="images/hummingbird.jpg" data-lightbox="images" data-title="Hummingbird perched on a branch">
+                <img src="images/hummingbird.jpg" alt="Hummingbird">
+            </a>
+            <a href="images/macaw.jpg" data-lightbox="images" data-title="Macaw perched on a branch">
+                <img src="images/macaw.jpg" alt="Macaw">
+            </a>
+            <a href="images/toucan.jpg" data-lightbox="images" data-title="Toucan in the rainforest">
+                <img src="images/toucan.jpg" alt="Toucan">
+            </a>
+            <a href="images/cricket.jpg" data-lightbox="images" data-title="Cricket on a leaf">
+                <img src="images/cricket.jpg" alt="Cricket">
+            </a>
+            <a href="images/bat.jpg" data-lightbox="images" data-title="Bat in flight">
+                <img src="images/bat.jpg" alt="Bat">
+            </a>
+        </div>
+        <div>
+            <h3>The Majestic Bee</h3>
+            <p>The bee is a fascinating insect that plays a crucial role in pollination and the health of ecosystems worldwide. These industrious creatures are known for their social behavior, intricate hives, and delicious honey. Watch the bee video <a href="https://youtu.be/z9zZ48jJZyk?si=18_f19fy3i50KrT7" target="_blank">here</a>.</p>
+            <h3>The Beautiful Flamingo</h3>
+            <p>The flamingo is a striking bird known for its vibrant plumage, long legs, and distinctive beak. These elegant waders are found in tropical and subtropical regions worldwide, where they are admired for their beauty, grace, and social behavior. Watch the flamingo video <a href="https://youtu.be/QLV_K7DVeyU?si=J41ZzLPBr-h8xAOT" target="_blank">here</a>.</p>
+            <h3>The Elegant Bald Eagle</h3>    
+            <p>The bald eagle (Haliaeetus leucocephalus) is a majestic bird of prey that is native to North America. Known for its striking appearance, powerful build, and keen eyesight, the bald eagle is a symbol of strength, freedom, and resilience. Watch the bald eagle video <a href="https://youtu.be/1ryv1u2yXCk?si=EGdLrQXJp9zeEnkQ" target="_blank">here</a>.</p>
+            <h3>The Mysterious Owl</h3>
+            <p>The owl is a mysterious and enigmatic bird of prey known for its silent flight, keen senses, and haunting calls. These nocturnal hunters are found on every continent except Antarctica, where they play a crucial role in controlling rodent populations and maintaining the health of ecosystems. Watch the owl video <a href="https://youtu.be/bt3X8MJgJWo?si=dsnPg9D7cLfLucVt" target="_blank">here</a>.</p>
+            <h3>The Swift Peregrine Falcon</h3>
+            <p>The peregrine falcon (Falco peregrinus) is one of the fastest birds of prey in the world, capable of reaching speeds of over 240 miles per hour in a dive. These powerful raptors are found on every continent except Antarctica, where they are known for their speed, agility, and hunting prowess. Watch the peregrine falcon video <a href="https://youtu.be/r7lglchYNew?si=rhs0U3OJenbXWJoS" target="_blank">here</a>.</p>
+            <h3>The Colorful Hummingbird</h3>
+            <p>The hummingbird is a small, colorful bird known for its rapid wingbeats, hovering flight, and iridescent plumage. These tiny birds are found in the Americas, where they play a crucial role in pollination and are admired for their beauty and agility. Watch the hummingbird video <a href="https://youtu.be/gaUhxQtNOwM?si=BfIlcvoJFQPPFk8H" target="_blank">here</a>.</p>
+            <h3>The Charming Macaw</h3>
+            <p>The macaw is a colorful and charismatic parrot known for its striking plumage, powerful beak, and playful personality. These intelligent birds are found in the rainforests of Central and South America, where they are admired for their beauty, intelligence, and social behavior. Watch the macaw video <a href="https://youtu.be/e_Cl6uIrMVI?si=Tuv5ywA4c0iIeUBh" target="_blank">here</a>.</p>
+            <h3>The Picturesque Toucan</h3>
+            <p>The toucan is a colorful and charismatic bird known for its large, colorful bill, vibrant plumage, and playful behavior. These tropical birds are found in the rainforests of Central and South America, where they play a crucial role in seed dispersal and are admired for their beauty and agility. Watch the toucan video <a href="https://youtu.be/5ExbebXMw1M?si=U-AkSpttraHjBUSm" target="_blank">here</a>.</p>
+            <h3>The Noisy Cricket</h3>
+            <p>The cricket is a fascinating insect known for its chirping song, powerful hind legs, and unique life cycle. These nocturnal creatures are found in a wide range of habitats worldwide, where they play a crucial role in ecosystems as scavengers, predators, and prey. Watch the cricket video <a href="https://youtu.be/iKhs-g4ABNE?si=vEzu21Z9FCinppH9" target="_blank">here</a>.</p>
+            <h3>The Enigmatic Bat</h3>
+            <p>Bats are unique mammals belonging to the order Chiroptera, and they are the only mammals capable of sustained flight. These fascinating creatures play crucial roles in ecosystems worldwide, from pollination to insect control. Watch the bat video <a href="https://youtu.be/NBCODnTUOrY?si=Peiot-u043fIIQar" target="_blank">here</a>.</p>
+        </div>
+    </main>
+    <footer>
+        <p>This page was originally created by Tomas Gutierrez Orrego</p>
+        <p>&copy; 2024</p>
+        <button type="button" id ="demo" onmouseover="displayDate()" onclick="displayDate()">Display Date</button> 
+        <a href="#top">Jump to the Top</a>
+    </footer>
+</body>
+</html>    

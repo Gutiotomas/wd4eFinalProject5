@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Aquatic Marvels</title>
+    <link rel="icon" type="image/png" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="js/aquatic.js"></script>
+    <style>
+        body {
+            background-color: #1995AD;
+            max-width: 98%;
+            margin: 0 auto;
+            color: #000000;
+        }
+        header {
+            background-color: #A1D6E2;
+        }
+        .current{
+            background-color: #F1F1F2;
+        }
+        div img{
+            width:70%;
+            border: 5px solid #CEE6F2;
+            border-radius: 5%;
+        }
+        div img:hover{
+            width: 75%;
+            border: 5px dotted darkseagreen;
+        }
+        nav img{
+            width: 40vw;
+            border: 5px solid #CEE6F2;
+            border-radius: 5%;
+        }
+        nav img:hover{
+            width: 45vw;
+            border: 5px dotted darkseagreen;
+            
+        }
+        nav a:focus{
+            background-color: #90AFC5;
+        }
+        div img{
+            margin-left: 12%;
+        }
+        main a{
+            color: #000000;
+        }
+        button{
+            background-color: #A1D6E2;
+            padding: 5px;
+            margin: 5px;
+        }
+        p button{
+            padding: 2px;
+        }
+        @media screen and (min-width: 772px){
+            nav img{
+                width: 30vw;
+            }
+            nav img:hover{
+                width: 35vw;
+            }
+            div img{
+                width: 60%;
+                margin-left: 18%;
+            }
+            div img:hover{
+                width: 65%;
+            }
+        }   
+        @media screen and (min-width: 998px){ 
+            nav img{
+                width: 35vw;
+            }
+            nav img:hover{
+                width: 40vw;
+            }
+            div img{
+                width: 45%;
+                margin-left: 25%;
+            }
+            div img:hover{
+                width: 50%;
+            }
+        } 
+        @media (prefers-color-scheme: dark){
+            header{
+                background-color:  #00FFFF;  
+                color:black;          
+            }
+            body a:focus{
+                color: white;
+            }
+            body{
+                background-color: #01257D;
+            }
+            footer a{
+                color: #FFF2D7;
+            }
+            .current{
+                background-color: #F8F8F9;
+            } 
+            footer{
+                color: white;
+            }
+            footer a{
+                color: white;
+            }
+            footer a:hover{
+                color: white;
+            }
+            nav a:focus{
+                color: black;
+            }
+            button{
+                color:black;
+            }
+        }
+        footer a{
+            display: block;
+        }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: blue;
+            width: 0%;
+        }
+        .trailer{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            visibility: hidden;
+            opacity: 0;
+        }  
+        .trailer.active{
+            visibility: visible;
+            opacity: 1;
+        }
+        .trailer video{
+            max-width: 80%;
+            outline: none;
+        }      
+        .close{
+            position: absolute;
+            top: 10%;
+            right: 4%;
+            max-width: 5vw;
+            cursor: pointer;
+            border: 2px solid black;
+            color: black;
+            opacity: 1;
+        }
+        .close:hover{
+            border: none;
+        }
+    </style>
+</head>
+<body class="fade-in" onload = "pickImage()">
+    <a class="offpage focus" href = "#main_content">Skip To Main Content</a>
+    <header id="top">
+        <nav>
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="index.html">Animal Kingdom</a></li>
+                <li class="current"><a href="aquatic.html">Aquatic Marvels</a></li>
+                <li><a href="land.html">Land Legends</a></li>
+                <li><a href="flying.html">Flaying Wonders</a></li>
+            </ul>
+            <img id="header_img" src="images/seahorse.jpg" alt="Waiting for an image">
+        </nav>
+        <h1>Underwater World</h1>
+    </header>
+    <main id="main_content">
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+        <h2>Discover the Marvels of Aquatic Life</h2>
+        <p>Dive into the mesmerizing world of the Aquatic Kingdom, where the wonders of the underwater realm come to life. From the deepest ocean trenches to the serene freshwater lakes and vibrant coral reefs, this section explores the incredible diversity of aquatic life. Here, you will discover the fascinating creatures that call these watery habitats home and learn some curious facts about them.</p>
+        <p>Join us on this captivating journey through the Aquatic Kingdom and marvel at the incredible life beneath the waves. Whether you're a marine enthusiast or a curious explorer, there's something here to fascinate and inspire everyone.</p>
+        <div>
+            <h3>The Majestic White Shark</h3>
+            <img src="images/shark.jpg" alt="White Shark">
+            <p>The white shark, often referred to as the great white shark, is one of the most iconic and formidable predators of the ocean. Known scientifically as Carcharodon carcharias, these magnificent creatures are renowned for their impressive size, powerful build, and razor-sharp teeth.<button onclick="toggleVideo(0)">Watch Video</button></p>       
+            <div class="trailer">
+                <video src="images/shark.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(0)" alt="Close button">
+            </div>
+        </div>
+        <div>
+            <h3>The Graceful Dolphin</h3>
+            <img src="images/dolphin.jpg" alt="Dolphin jumping">
+            <p>Dolphins are among the most beloved and intelligent creatures of the sea. With their playful nature, acrobatic skills, and social behavior, these marine mammals have captured the hearts of people around the world. Dolphins belong to the family Delphinidae and are known for their remarkable communication abilities and close-knit social groups.<button onclick="toggleVideo(1)">Watch Video</button></p>            
+            <div class="trailer">
+                <video src="images/dolphin.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(1)" alt="Close button">
+            </div>
+        </div>
+        <div>
+            <h3>The Enigmatic Octopus</h3>
+            <img src="images/octopus.jpg" alt="Octopus">
+            <p>The octopus is a fascinating and mysterious creature that inhabits the depths of the ocean. With its eight tentacles, remarkable intelligence, and ability to change color and texture, the octopus is a master of camouflage and deception. Octopuses belong to the order Octopoda and are known for their unique anatomy and behavior.<button onclick="toggleVideo(2)">Watch Video</button></p>
+            <div class="trailer">
+                <video src="images/octopus.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(2)" alt="Close button">
+            </div>
+        </div>
+        <div>
+            <h3>The Giant Blue Whale</h3>
+            <img src="images/whale.jpg" alt="Blue Whale">
+            <p>The blue whale (Balaenoptera musculus) is not only the largest animal on the planet but also one of the most awe-inspiring. These gentle giants of the ocean captivate our imagination with their immense size, beauty, and the mystery of their deep-sea lives.<button onclick="toggleVideo(3)">Watch Video</button></p>
+            <div class="trailer">
+                <video src="images/whale.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(3)" alt="Close button">
+            </div>
+        </div>
+        <div>
+            <h3>The Fearsome Piranha</h3>
+            <img src="images/piranha.jpg" alt="Piranha">
+            <p>The piranha, often depicted as a ferocious predator, is one of the most intriguing and misunderstood fish in the world. Native to the freshwater rivers and lakes of South America, these fish are known for their sharp teeth and powerful jaws.<button onclick="toggleVideo(4)">Watch Video</button></p>
+            <div class="trailer">
+                <video src="images/piranha.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(4)" alt="Close button">
+            </div>
+        </div>
+        <div>
+            <h3>The Soulful Sea Turtle</h3>
+            <img src="images/turtle.jpg" alt="Underwater Sea Turtle">
+            <p>Sea turtles are among the most ancient and captivating creatures of the ocean, having roamed the seas for over 100 million years. These majestic reptiles are known for their long migrations, unique life cycle, and critical role in marine ecosystems.<button onclick="toggleVideo(5)">Watch Video</button></p>
+            <div class="trailer">
+                <video src="images/turtle.mp4" controls=""></video>
+                <img src="images/close.png" class="close" onclick="toggleVideo(5)" alt="Close button">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>This page was originally created by Tomas Gutierrez Orrego</p>
+        <p>&copy; 2024</p>
+        <button type="button" id ="demo" onmouseover="displayDate()" onclick="displayDate()">Display Date</button> 
+        <a href="#top">Jump to the Top</a>
+    </footer>
+</body>
+</html>

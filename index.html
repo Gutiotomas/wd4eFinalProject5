@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Animal Kingdom</title>
+    <link rel="icon" type="image/png" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="js/index.js"></script>
+    <style>
+        body {
+            background-color: #F98866;
+            max-width: 98%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #FFF2D7;
+        }
+        .current{
+            background-color: #F98866;
+        }
+        nav img{
+            border: 5px solid #783C11;
+            width: 50vw;
+        }
+        nav img:hover{
+            border: 5px solid #008000;
+            width:55%;
+        }
+        main img{
+            border: 5px solid #008000;
+            width: 50vw;
+            margin-left: 20%;
+        }
+        main img:hover{
+            border: 5px solid #FFF2D7;
+            width:55%;
+        }
+        nav a{
+            border: 2px dashed #008000;
+        }
+        nav a:focus{
+            background-color: #F98866;
+        }
+        button{
+            background-color: #783C11;
+            color: #FFF2D7;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        footer a{
+            display: block;
+        }          
+        @media screen and (min-width: 772px){
+            nav img{
+                width: 35vw;
+            }
+            nav img:hover{
+                width: 38vw;
+            }
+            main img{
+                width: 50vw;
+                margin-left: 22%;
+            }
+        }
+        @media screen and (min-width: 998px){
+            nav img{
+                width: 40vw;
+            }
+            nav img:hover{
+                width: 45vw;
+            }
+            main img{
+                width: 45vw;
+                margin-left: 25%;
+            }
+            main img:hover{
+                width: 50vw;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            header{
+                background-color:  #BAFF39;            
+            }
+            body{
+                background-color: #6E6E6E;
+            }
+            footer a{
+                color: #FFF2D7;
+            }
+            .current{
+                background-color: #FFF2D7;
+            }   
+            #progressBar{
+                background: #6E6E6E;
+            }
+            body a:focus{
+                color: white;
+            }
+            nav a:focus{
+                color:black;
+            }
+            footer a:hover{
+                color: white;
+            }
+        }
+        img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: orange;
+            width: 0%;
+        }       
+    </style>
+</head>
+<body class="fade-in" onload="setImages()">
+    <a class="offpage" href = "#main_content">Skip To Main Content</a>
+    <header id="top">
+        <nav>
+            <ul class="nav nav-pills nav-justified"> 
+                <li class="current"><a href="index.html">Animal Kingdom</a></li>
+                <li><a href="aquatic.html">Aquatic Marvels</a></li>
+                <li><a href="land.html">Land Legends</a></li>
+                <li><a href="flying.html">Flaying Wonders</a></li>
+            </ul>
+            <img src="images/lemur.jpg" alt="Waiting for an image">
+        </nav>
+        <h1>Favorite Animals Of All Time</h1>
+    </header>
+    <main id="main_content">
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+        <h2>Welcome to the Ultimate Animal Kingdom!</h2>
+        <p>Dive into the fascinating world of animals, where we celebrate the most beloved creatures of all time. From the depths of the ocean to the vast skies and diverse landscapes, our page explores the favorite animals from every class: aquatic, land, and flying.</p>                
+        <h3>Explore the Animal Classes</h3>
+            <h4>Aquatic Marvels</h4>
+            <p>Discover the enchanting underwater world filled with majestic creatures like dolphins, giant whales, and scary creatures. These aquatic marvels captivate our hearts with their beauty and mystery.</p>
+            <h4>Land Legends</h4>
+            <p>Roam the wild terrains and meet the iconic animals that grace our forests, savannas, and mountains. From the mighty lion to the gentle elephant, these land legends have inspired awe and admiration throughout history.</p>
+            <h4>Flying Wonders</h4>
+            <p>Soar through the skies with our feathered friends and other flying wonders. Whether it's the elegant eagle, the colorful parrot, or the mystical dragonfly, these creatures bring a touch of magic to the air.</p>
+        <img src="images/bear.jpg" alt="Waiting for an image">
+        <p>Join us on this journey to explore and appreciate the incredible diversity of the animal kingdom. Each section is filled with fascinating facts, stunning images, and stories that highlight why these animals hold a special place in our hearts.</p>
+    </main>
+    <footer>
+        <p>This page was originally created by Tomas Gutierrez Orrego</p>
+        <p>&copy; 2024</p>
+        <button type="button" id ="demo" onclick="displayDate()" onmouseover="displayDate()">Display Date </button>
+        <a href="#top">Jump to the Top</a>
+    </footer>
+</body>
+</html>
