@@ -46,6 +46,34 @@
             border-radius: 30%;
             padding: 2px;
         }
+        button{
+            background-color: #1750BA;
+            color: cornsilk;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        footer a{
+            display: block;
+        }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }
+        #progressBar {
+            height: 5px;
+            background: blue;
+            width: 0%;
+        }
         @media screen and (min-width: 772px){
             div img{
                 display:inline-block;
@@ -108,34 +136,7 @@
                 color: white;
             }
         }
-            button{
-            background-color: #1750BA;
-            color: cornsilk;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        footer a{
-            display: block;
-        }
-        #header_img:hover{
-            box-shadow: 0 0 50px rgba(0,0,0,1);
-        }
-        #progressContainer {
-            width: 100%;
-            background: #f3f3f3;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 5px;
-            z-index: 100;
-        }
-        #progressBar {
-            height: 5px;
-            background: blue;
-            width: 0%;
-        } 
+             
     </style>
 </head>
 <body class="fade-in" onload = "pickImage()">
