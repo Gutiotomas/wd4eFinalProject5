@@ -57,6 +57,23 @@
         footer a{
             display: block;
         }
+        #header_img:hover{
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+        #progressContainer {
+            width: 100%;
+            background: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            z-index: 100;
+        }        
+        #progressBar {
+            height: 5px;
+            background: green;
+            width: 0%;
+        }
         @media screen and (min-width: 772px){
             div img{
                 display:inline-block;
@@ -112,23 +129,6 @@
             footer a:hover{
                 color: black;
             }
-        }
-        #header_img:hover{
-            box-shadow: 0 0 50px rgba(0,0,0,1);
-        }
-        #progressContainer {
-            width: 100%;
-            background: #f3f3f3;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 5px;
-            z-index: 100;
-        }        
-        #progressBar {
-            height: 5px;
-            background: green;
-            width: 0%;
         } 
     </style>
 </head>
